@@ -731,6 +731,8 @@
                     }
                     if (currentDate.isSame(date, 'd') && !unset) {
                         clsName += ' active';
+
+                        console.log('currentDate.isSame');
                     }
                     if (!isValid(currentDate, 'd')) {
                         clsName += ' disabled';
@@ -1373,6 +1375,8 @@
 
             initFormatting = function () {
                 var format = options.format || 'L LT';
+
+                console.log('initFormatting');
 
                 actualFormat = format.replace(/(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g, function (formatInput) {
                     var newinput = date.localeData().longDateFormat(formatInput) || formatInput;
@@ -2285,7 +2289,6 @@
 
             if (!newDate) {
                 viewDate = date.clone();
-                console.log('test yup ' + viewDate);
                 return picker;
             }
 
@@ -2347,6 +2350,8 @@
         if (options.inline) {
             show();
         }
+
+        console.log('actual picker');
         return picker;
     };
 
@@ -2365,6 +2370,7 @@
                 $this.data('DateTimePicker', dateTimePicker($this, options));
             }
         });
+        console.log('fn.datetimepicker');
     };
 
     $.fn.datetimepicker.defaults = {
