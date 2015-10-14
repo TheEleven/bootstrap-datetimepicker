@@ -1,4 +1,4 @@
-/*! version : 4.17.37
+/*! version : 4.17.37 – modified by Jay-dawg
  =========================================================
  bootstrap-datetimejs
  https://github.com/Eonasdan/bootstrap-datetimepicker
@@ -2285,6 +2285,7 @@
 
             if (!newDate) {
                 viewDate = date.clone();
+                console.log('test yup ' + viewDate);
                 return picker;
             }
 
